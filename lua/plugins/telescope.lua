@@ -24,7 +24,11 @@ return {
 		vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[f]inder [r]esume' })
 
 		vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = '[g]oto [d]efinition' })
-		vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = '[g]oto [r]eferences', nowait=true })
+		vim.keymap.set('n', 'gr', function()
+			builtin.lsp_references({
+				show_line =  false,
+			})
+		end , { desc = '[g]oto [r]eferences', nowait=true })
 		vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = '[g]oto [i]mpl' })
 	end,
 }
