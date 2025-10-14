@@ -22,5 +22,9 @@ return {
 		vim.keymap.set('n', '<leader>bl', builtin.buffers, { desc = '[b]uffers [l]ist' })
 		vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = '[g]it [s]tatus' })
 		vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[f]inder [r]esume' })
+
+		vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = '[g]oto [d]efinition' })
+		vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = '[g]oto [r]eferences', nowait=true })
+		vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = '[g]oto [i]mpl' })
 	end,
 }
