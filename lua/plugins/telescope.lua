@@ -18,6 +18,13 @@ return {
 		)
 		vim.keymap.set('n', '<leader>fg', builtin.git_files, { desc = '[g]it [f]iles' })
 		vim.keymap.set('n', '<leader>/', builtin.live_grep, { desc = 'live grep' })
+		vim.keymap.set('n', '<leader>fm', function()
+			builtin.live_grep({
+				additional_args = function()
+					return { "--multiline", "--multiline-dotall" }
+				end,
+			})
+		end, { desc = 'live grep multiline' })
 		vim.keymap.set('n', '<leader>fu', builtin.grep_string, { desc = 'find word [u]nder [c]ursor' })
 		vim.keymap.set('n', '<leader>bl', builtin.buffers, { desc = '[b]uffers [l]ist' })
 		vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = '[g]it [s]tatus' })
