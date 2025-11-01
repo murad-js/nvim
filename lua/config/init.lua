@@ -5,6 +5,7 @@ require("config.diagnostic")
 require("config.lazy")
 
 vim.lsp.enable("ts_ls")
+vim.lsp.enable("clangd")
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('my.lsp', {}),

@@ -17,6 +17,16 @@ return {
 			{  desc = '[f]ind [f]iles' }
 		)
 		vim.keymap.set('n', '<leader>fg', builtin.git_files, { desc = '[g]it [f]iles' })
+		vim.keymap.set(
+			'n', 
+			'<leader>fa',
+			function()
+				builtin.find_files({
+					find_command = { "rg", "--files", "--no-ignore" }
+				})
+			end,
+			{  desc = '[f]ind [a]ll (.gitignore ignored)' }
+		)
 		vim.keymap.set('n', '<leader>/', builtin.live_grep, { desc = 'live grep' })
 		vim.keymap.set('n', '<leader>fm', function()
 			builtin.live_grep({
