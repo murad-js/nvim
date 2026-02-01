@@ -13,6 +13,7 @@ return {
 				lua = { "stylua" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
+				scala = { "scalafmt" },
 			},
 			formatters = {
 				["clang-format"] = {

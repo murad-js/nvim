@@ -20,6 +20,14 @@ vim.keymap.set("n", "<leader>bo", function()
 	end
 end)
 
+vim.keymap.set("n", "<leader>yd", function()
+	vim.fn.setreg("+", vim.fn.getcwd())
+end)
+
+vim.keymap.set("n", "<leader>yf", function()
+	vim.fn.setreg("+", vim.fn.expand("%:p"))
+end)
+
 vim.keymap.set("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
