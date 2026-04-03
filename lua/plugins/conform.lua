@@ -13,6 +13,7 @@ return {
 				lua = { "stylua" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
+				typescriptreact = { "prettier" },
 				scala = { "scalafmt" },
 			},
 			formatters = {
